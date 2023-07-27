@@ -1,6 +1,19 @@
 body {
     background-color: #F0EFEC;
 }
+
 .card {
     background-color: white;
 }
+
+.header {
+    display: grid;
+    grid-template-columns: 160px 160px;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+
