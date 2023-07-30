@@ -8,6 +8,15 @@ body {
     background-color: white;
     padding: 10px;
     border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px #00000020
+}
+
+.card:hover {
+    padding: 6px;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .header {
@@ -44,9 +53,18 @@ img {
     border-radius: 100%;
 }
 
+.mystery-card {
+    text-align: center;
+    font-weight: bold;
+}
+
 .instructions {
     border-width: 4px;
     border-style: solid;
     border-color: white;
     padding: 20px;
+}
+
+h2 {
+    text-align: center;
 }
