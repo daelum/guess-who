@@ -99,6 +99,20 @@ function getRandomCard() {
 }
 getRandomCard(cards)
 
+function populateCards() {
+    let cardBox = document.querySelector('.cards')// target the div holding all the cards and store in variable
+    let injection = '' // create variable that will hold a string for injected HTML
+    for (let i = 0; i < cards.length; i++) { // loop that iterates through the cards aray
+         let cardPosition = cards[i] // variable that stores the index postion for each iteration of the loop
+         injection = injection + '<div class="card" onclick="toggleEliminated(this)">'
+          + '<img src="' + cardPosition.image + '" />' + '<span>' + cardPosition.name + '</span>' + '</div>'//injection is updated to add the required HTML and cardPosition for image and name tags for each index postion
+    }
+    cardBox.innerHTML = injection//the innerHTML of the div containing all the cards is upadted as the injection variable of the loop
+ }   
+ populateCards(cards)
+
+ 
+/*THE BELOW WAS REPLACED WITH THE ABOVE TO BETTER REFLECT COURSE MATERIAL AND SHOW INNER WORKINGS OF FOR LOOP, INJECTION CONCANTENATION AND ${PLACEHOLDERS}
 //function to inject data(characters) directly into the html from js
 function populateCards() {
         let cardsBox = document.querySelector('.cards')// targeted .cards html div and assigned them to a variable
@@ -119,4 +133,3 @@ array it iterates through them it, takes the current value of the variable (whic
 it adds or 'concantenates' a new value to the current value, and it assigns the results back to the variable. 
 I used Template literals(`` aka backticks) to embed the html into the injection variable
 and a template literal placeholder `${..}` inside the html that holds the location of the injected source */
-populateCards(cards)
