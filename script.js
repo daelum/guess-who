@@ -90,15 +90,12 @@ let cards = [
 //random number between 0 and 19
 function getRandomCard() {
     let randomCard = Math.floor(Math.random() * 19)//Math.floor seems to turn the Math.random into a whole integer
-    return randomCard
+    let randomCardIndex = randomCard//the random number generated correlates to a index postion which is placed in this var
+    let selectedCard = cards[randomCardIndex]// calling the above variable(random index postion) on the cards array and declaring it as selectedCard
+    document.querySelector('.mystery-card span').innerHTML = selectedCard.name//pulling up the msytery-card div and replacing its inner HTML with the selectedCards name
+    document.querySelector('.mystery-card img').src = selectedCard.image//accessing the 'img' tags source and replacing the card image with selected card 
 }
-console.log(getRandomCard())
-
-let randomCardIndex = getRandomCard()//the random number generated correlates to a index postion which is placed in this var
-let selectedCard = cards[randomCardIndex]// calling the above variable(random index postion) on the cards array and declaring it as selectedCard
-
-document.querySelector('.mystery-card span').innerHTML = selectedCard.name//pulling up the msytery-card div and replacing its inner HTML with the selectedCards name
-document.querySelector('.mystery-card img').src = selectedCard.image//accessing the 'img' tags source and replacing the card image with selected card 
+getRandomCard(cards)
 
 //function to inject data(characters) directly into the html from js
 function populateCards() {
