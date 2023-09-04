@@ -92,8 +92,8 @@ function getRandomCard() {
     let randomCard = Math.floor(Math.random() * 19)//Math.floor seems to turn the Math.random into a whole integer
     let randomCardIndex = randomCard//the random number generated correlates to a index postion which is placed in this var
     let selectedCard = cards[randomCardIndex]// calling the above variable(random index postion) on the cards array and declaring it as selectedCard
-    let mysterySpan = document.querySelector('.mystery-card span')
-        mysterySpan.innerhtml = selectedCard.name
+    let mysterySpan = document.querySelector('.mysteryName')
+        mysterySpan.innerHTML = selectedCard.name
     let mysteryImg = document.querySelector('.mystery-card img')
         mysteryImg.src = selectedCard.image
 }
