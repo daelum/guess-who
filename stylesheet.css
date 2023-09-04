@@ -72,3 +72,9 @@ h2 {
 .eliminated {   
     opacity: 0.2;
 }
+
+.mysteryName {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+} /* to centre the mysteryName i turned the span into a block using display: inline-block;
